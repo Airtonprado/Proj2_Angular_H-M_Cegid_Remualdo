@@ -1,0 +1,43 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "login": "master",
+      "email": "user@example.com",
+      "password": "123",
+      "morada": "Rua das Neves",
+      "CaixaPostal": "4715-000",
+      "pais": "Portugal"
+    },
+    {
+      "id": "aaba",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "908c",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": "7551",
+      "login": "Marcos",
+      "nome": "Marcos Delfim",
+      "email": "M@gmail.com",
+      "password": "123",
+      "morada": "Serrinha",
+      "caixaPostal": "4715-000",
+      "pais": "Brasil"
+    },
+    {
+      "id": "bb04",
+      "login": "Thiago Poker Face",
+      "nome": "Thiago ",
+      "email": "t@gmail.com",
+      "password": "123",
+      "morada": "Lisboa",
+      "caixaPostal": "4700-000",
+      "pais": "Portugal"
+    }
+  ]
+}

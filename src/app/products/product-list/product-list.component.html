@@ -1,0 +1,32 @@
+<h2>O MELHOR SALDO AQUI!</h2>
+
+<div class="search">
+  <!-- [()] - banana in a box - two-day data binding -->
+  <p>
+    <label for="searchValue">Search:</label>
+    <input
+      type="text"
+      id="searchValue"
+      [(ngModel)]="searchValue"
+      (keyup)="searchProduto()"
+    />
+    <input type="button" value="Search" (click)="searchProduto()" />
+    <input type="button" value="Clear search" (click)="clearSearch()" />
+  </p>
+
+  <p>Pesquisa por: {{ searchValue }}</p>
+</div>
+<div class="product-grid">
+  <div class="product-card" *ngFor="let product of cardsInfo">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>{{ product.nome }}</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image [src]="imgFolder + '/' + product.nome + '.jpg'" />
+      <button mat-button routerLink="produce" active="active">AddList</button>
+      <mat-card-content>
+        <span>{{ product.preco | currency : "EUR" }}</span>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

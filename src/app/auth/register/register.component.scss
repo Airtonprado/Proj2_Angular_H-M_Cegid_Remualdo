@@ -1,0 +1,62 @@
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+
+  p {
+    margin-bottom: 15px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  input[type="submit"]:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+
+  input[type="submit"]:hover:not(:disabled) {
+    background-color: #45a049;
+  }
+
+  small {
+    color: red;
+  }
+}
+
+// Ocultar apenas a seção abaixo do botão de envio
+section {
+  display: none;
+}
+h2 {
+  text-align: center;  // Centraliza o texto
+  font-size: 24px;     // Ajusta o tamanho da fonte
+  margin-top: 20px;    // Espaço no topo para dar um pouco de respiro
+}

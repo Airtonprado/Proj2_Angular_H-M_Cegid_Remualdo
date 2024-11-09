@@ -1,0 +1,123 @@
+<h2>REGISTRO DE USUARIO</h2>
+<form [formGroup]="registerForm" (ngSubmit)="insertUsers()">
+  <p>
+    <label for="login">Login:</label>
+    <input type="text" id="login" formControlName="login" />
+  </p>
+  <p
+    *ngIf="
+      registerForm.get('login')?.touched && registerForm.get('login')?.invalid
+    "
+  >
+    <small *ngIf="registerForm.get('login')?.hasError('required')"
+      >O campo 'login' é de preenchimento obrigatório.</small
+    >
+    <small *ngIf="registerForm.get('login')?.hasError('pattern')"
+      >O campo 'login' só pode ter letras e espaços.</small
+    >
+  </p>
+  <p>
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" formControlName="nome" />
+  </p>
+  <p
+    *ngIf="
+      registerForm.get('nome')?.touched && registerForm.get('nome')?.invalid
+    "
+  >
+    <small *ngIf="registerForm.get('nome')?.hasError('required')"
+      >O campo 'Nome' é de preenchimento obrigatório.</small
+    >
+    <small *ngIf="registerForm.get('nome')?.hasError('pattern')"
+      >O campo 'Nome' só pode ter letras e espaços.</small
+    >
+  </p>
+
+  <p>
+    <label for="email">Email:</label>
+    <input type="text" id="email" formControlName="email" />
+  </p>
+  <p
+    *ngIf="
+      registerForm.get('email')?.touched && registerForm.get('email')?.invalid
+    "
+  >
+    <small *ngIf="registerForm.get('email')?.hasError('required')"
+      >O campo 'Email' é de preenchimento obrigatório.</small
+    >
+    <small *ngIf="registerForm.get('email')?.hasError('email')"
+      >O campo 'Email' só permite email válido!</small
+    >
+  </p>
+
+  <p>
+    <label for="password">Senha:</label>
+    <input type="password" id="password" formControlName="password" />
+  </p>
+  <p
+    *ngIf="
+      registerForm.get('password')?.touched &&
+      registerForm.get('password')?.invalid
+    "
+  >
+    <small *ngIf="registerForm.get('password')?.hasError('required')"
+      >O campo 'Senha' é de preenchimento obrigatório.</small
+    >
+    <small *ngIf="registerForm.get('password')?.hasError('minlength')"
+      >O campo 'Senha' deve ter pelo menos 3 caracteres.</small
+    >
+  </p>
+
+  <p>
+    <label for="morada">Morada:</label>
+    <input type="text" id="morada" formControlName="morada" />
+  </p>
+  <p
+    *ngIf="
+      registerForm.get('morada')?.touched && registerForm.get('morada')?.invalid
+    "
+  >
+    <small>O campo 'Morada' é de preenchimento obrigatório.</small>
+  </p>
+
+  <p>
+    <label for="caixaPostal">Caixa Postal:</label>
+    <input type="text" id="caixaPostal" formControlName="caixaPostal" />
+  </p>
+  <p
+    *ngIf="
+      registerForm.get('caixaPostal')?.touched &&
+      registerForm.get('caixaPostal')?.invalid
+    "
+  >
+    <small>O campo 'Caixa Postal' é de preenchimento obrigatório.</small>
+  </p>
+
+  <p>
+    <label for="pais">País:</label>
+    <input type="text" id="pais" formControlName="pais" />
+  </p>
+  <p
+    *ngIf="
+      registerForm.get('pais')?.touched && registerForm.get('pais')?.invalid
+    "
+  >
+    <small>O campo 'País' é de preenchimento obrigatório.</small>
+  </p>
+
+  <p>
+    <input
+      type="submit"
+      value="Registrar Usuário"
+      [disabled]="registerForm.invalid"
+    />
+  </p>
+</form>
+
+<section>
+  <pre>{{ registerForm.value | json }}</pre>
+  <p>Estado: {{ registerForm.status }}</p>
+  <p>Formulário válido: {{ registerForm.valid }}</p>
+  <p>Formulário inválido: {{ registerForm.invalid }}</p>
+  <p>Campo 'login' inválido: {{ registerForm.get("login")?.invalid }}</p>
+</section>

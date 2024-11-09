@@ -1,0 +1,136 @@
+<nav class="main-nav">
+  <ul class="menu">
+    <!-- Sub-menu para Homem -->
+    <li>
+      <button mat-button [matMenuTriggerFor]="homemMenu">Homem</button>
+      <mat-menu #homemMenu="matMenu">
+        <button mat-menu-item routerLink="products" active="active">
+          Casacos
+        </button>
+        <button mat-menu-item routerLink="products" active="active">
+          Camisas
+        </button>
+        <button mat-menu-item routerLink="products" active="active">
+          Calças
+        </button>
+        <button mat-menu-item routerLink="products" active="active">
+          Sweatshirts
+        </button>
+        <button mat-menu-item routerLink="products" active="active">
+          Polos
+        </button>
+        <button mat-menu-item routerLink="products" active="active">
+          Sapatos
+        </button>
+        <button mat-menu-item routerLink="products" active="active">
+          Todos
+        </button>
+      </mat-menu>
+    </li>
+    <!-- Sub-menu para Mulher -->
+    <li>
+      <button mat-button [matMenuTriggerFor]="mulherMenu">Mulher</button>
+      <mat-menu #mulherMenu="matMenu">
+        <button mat-menu-item routerLink="Page not found" active="active">
+          Vestidos
+        </button>
+        <button mat-menu-item routerLink="Page not found" active="active">
+          Blusões
+        </button>
+        <button mat-menu-item routerLink="Page not found" active="active">
+          Coletes
+        </button>
+        <button mat-menu-item routerLink="Page not found" active="active">
+          Jeans
+        </button>
+        <button mat-menu-item routerLink="Page not found" active="active">
+          Saias
+        </button>
+        <button mat-menu-item routerLink="Page not found" active="active">
+          Calções
+        </button>
+        <button mat-menu-item routerLink="Page not found" active="active">
+          Lingerie
+        </button>
+        <button mat-menu-item routerLink="Page not found" active="active">
+          Sapatos
+        </button>
+        <button mat-menu-item routerLink="Page not found" active="active">
+          Mala
+        </button>
+        <button mat-menu-item routerLink="Page not found" active="active">
+          Todos
+        </button>
+      </mat-menu>
+    </li>
+
+    <!-- Logo entre Mulher e Criança -->
+    <!-- Link para home -->
+    <li class="logo">
+      <a class="logo-link" [routerLink]="['/']" (click)="onLogoClick()">
+        <img [src]="logo" alt="Logo" />
+      </a>
+    </li>
+
+    <!-- Sub-menu para Criança -->
+    <li>
+      <button mat-button [matMenuTriggerFor]="criancaMenu">Criança</button>
+      <mat-menu #criancaMenu="matMenu">
+        <button mat-menu-item routerLink="Page not found" active="active">
+          Menina | 6-14 Anos
+        </button>
+        <button mat-menu-item routerLink="Page not found" active="active">
+          Menino | 6-14 Anos
+        </button>
+        <button mat-menu-item routerLink="Page not found" active="active">
+          Bebé Menina | 3 Meses - 5 Anos
+        </button>
+        <button mat-menu-item routerLink="Page not found" active="active">
+          Bebé Menino | 3 Meses - 5 Anos
+        </button>
+        <button mat-menu-item routerLink="Page not found" active="active">
+          Mini | 0-12 Meses
+        </button>
+      </mat-menu>
+    </li>
+
+    <!-- Sub-menu para Acessórios -->
+    <li>
+      <button mat-button [matMenuTriggerFor]="acessoriosMenu">
+        Acessórios
+      </button>
+      <mat-menu #acessoriosMenu="matMenu">
+        <button mat-menu-item routerLink="Page not found" active="active">
+          Mala
+        </button>
+        <button mat-menu-item routerLink="Page not found" active="active">
+          Pulseiras
+        </button>
+        <button mat-menu-item routerLink="Page not found" active="active">
+          Anéis
+        </button>
+      </mat-menu>
+    </li>
+
+    <!-- Ícones de autenticação -->
+    <li class="auth-icons">
+      <a routerLink="auth/register" title="Register">
+        <i class="fa-solid fa-user-plus"></i>
+      </a>
+      <a routerLink="auth/login" title="Login">
+        <i class="fa-solid fa-arrow-right-to-bracket"></i>
+      </a>
+
+      <!-- Ícones para usuários autenticados -->
+      <a routerLink="/wishlist" title="Wishlist">
+        <i class="fa-regular fa-clipboard"></i>
+      </a>
+      <a routerLink="/profile" title="Profile">
+        <i class="fa-regular fa-user"></i>
+      </a>
+      <!-- <a (click)="logout()" title="Logout">
+        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+      </a> -->
+    </li>
+  </ul>
+</nav>

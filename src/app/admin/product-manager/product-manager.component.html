@@ -1,0 +1,30 @@
+<p *ngIf="productList && productList.length === 0">
+  Não existem produtos que obedeçam à pesquisa
+</p>
+<table class="tabelaDados" *ngIf="productList && productList.length > 0">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Preço</th>
+      <th>Disponível</th>
+      <th>marca</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      *ngFor="let produto of productList"
+      (click)="showProdutoInfo(produto.id)"
+    >
+      <td>{{ produto.nome }}</td>
+      <td>{{ produto.preco }}</td>
+      <td>{{ produto.marca ? "✔️" : "❌" }}</td>
+      <td></td>
+      <td><button (click)="deleteProduto1(produto.id, $event)">X</button></td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="4">Total de produtos: {{ productList.length }}</td>
+    </tr>
+  </tfoot>
+</table>
